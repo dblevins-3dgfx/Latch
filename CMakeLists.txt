@@ -33,6 +33,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
+set (CMAKE_CXX_STANDARD 11)
 add_executable(latchtest latchtest.cpp latch.h)
 target_link_libraries(latchtest gtest_main)
 add_test(NAME example_test COMMAND latchtest)
